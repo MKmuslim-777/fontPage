@@ -61,12 +61,8 @@ body{
     color: #0ef;
 }
 
-.toggle_btn{
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
+
+
 
 
 
@@ -101,7 +97,7 @@ body{
         .menu-bar ul li a{
             width: 11px;
             text-decoration: none;
-            color: rgb(20, 36, 49);
+            color: rgb(255, 255, 255);
             font-size: 20px;
         }
 
@@ -111,19 +107,21 @@ body{
 
         .Post{
             display: none;
-            backdrop-filter: blur(550px);
-            border-radius: 8px;
-            height: 200px;
-            border: 2px solid rgb(168, 162, 162);
+            background: #1f242d;
+            box-shadow: 0 8px 32px 0 rgba(51, 52, 56, 0.37);
+            backdrop-filter: blur( 12000px );
+            -webkit-backdrop-filter: blur( 3px );
+            border-radius: 24px;
+            border: 1px solid rgba(167, 158, 158, 0.18);
         }
         .Post ul li a{
-            color: rgb(0, 136, 255);
+            color: #0ef;
             /* padding-top: 50px; */
         }
         .menu-bar ul li:hover .Post{
             display: block;
             position: absolute;
-            background: transparent;
+            background: #1f242d;
             margin-top: 5px;
             margin-left: -100px;
             backdrop-filter: blur(550px);
@@ -133,7 +131,7 @@ body{
             margin: 10px;
         }
         .menu-bar ul li:hover .Post ul li{
-            width: 120px;
+            width: 100px;
             padding: 20px;
             margin-top: none;
             background: transparent;
@@ -150,7 +148,7 @@ body{
 
 
         /* person */
-        .Person{
+        .Person, .King, .fan, .gait{
             display: none;
             backdrop-filter: blur(2000px);
             background: #fff;
@@ -158,22 +156,22 @@ body{
             height: 200px;
             border: 2px solid rgb(168, 162, 162);
         }
-        .Person ul li a{
-            color: #0059ff;
+        .Person ul li a, .King ul li a, .fan ul li a, .gait ul li a{
+            color: #0ef;
         }
-        .Post ul li:hover .Person{
+        .Post ul li:hover .Person, .Post ul li:hover .King{
             display: block;
             position: absolute;
-            background: transparent;
+            background: #1f242d;
             margin-top: 110px;
             margin-left: -200px;
             
         }
-        .Post ul li:hover .Person ul{
+        .Post ul li:hover .Person ul, .Post ul li:hover .King ul, .Post ul li:hover .fan ul, .Post ul li:hover .gait ul{
             display: block;
             margin: 10px;
         }
-        .Post ul li:hover .Person ul li{
+        .Post ul li:hover .Person ul li, .Post ul li:hover .King ul li, .Post ul li:hover .fan ul li, .Post ul li:hover .gait ul li{
             width: 250px;
             padding: 20px;
             background: transparent;
@@ -181,139 +179,28 @@ body{
             text-align: left;
             align-items: center;
         }
-        .Post ul li:hover .Person ul li:last-child{
-            border-bottom: none;
-        }
-        .Post ul li:hover .Person ul li a:hover{
+        .Post ul li:hover .Person ul li a:hover, .Post ul li:hover .King ul li a:hover, .Post ul li:hover .fan ul li a:hover, .Post ul li:hover .gait ul li a:hover{
             color: rgb(223, 223, 223);
         }
 
 
 
-
-
-        /* King */
-        .King{
-            display: none;
-            backdrop-filter: blur(1050px);
-            background: #fff;
-            border-radius: 8px;
-            height: 200px;
-            border: 2px solid rgb(168, 162, 162);
-        }
-        .King ul li a{
-            color: #0077ff;
-        }
-        .Post ul li:hover .King{
-            display: block;
-            position: absolute;
-            background: transparent;
-            margin-top: 90px;
-            margin-left: -200px;
-        }
-        .Post ul li:hover .King ul{
-            display: block;
-            margin: 10px;
-        }
-        .Post ul li:hover .King ul li{
-            width: 250px;
-            padding: 20px;
-            background: transparent;
-            border-radius: 0;
-            text-align: left;
-            align-items: center;
-        }
-        .Post ul li:hover .King ul li:last-child{
-            border-bottom: none;
-        }
-        .Post ul li:hover .King ul li a:hover{
-            color: rgb(220, 223, 220);
-        }
-
-
-
-
-
-        /* fan */
-        .fan{
-            display: none;
-            backdrop-filter: blur(1050px);
-            background: #fff;
-            border-radius: 8px;
-            height: 200px;
-            border: 2px solid rgb(168, 162, 162);
-        }
-        .fan ul li a{
-            color: #027add;
-        }
-        .Post ul li:hover .fan{
-            display: block;
-            position: absolute;
-            background: transparent;
-            margin-top: 70px;
-            margin-left: -200px;
-        }
-        .Post ul li:hover .fan ul{
-            display: block;
-            margin: 10px;
-        }
-        .Post ul li:hover .fan ul li{
-            width: 250px;
-            padding: 20px;
-            background: transparent;
-            border-radius: 0;
-            text-align: left;
-            align-items: center;
-        }
-        .Post ul li:hover .fan ul li:last-child{
-            border-bottom: none;
-        }
-        .Post ul li:hover .fan ul li a:hover{
-            color: rgb(224, 224, 224);
-        }
-
-
-
-        /* gait */
-        .gait{
-            display: none;
-            backdrop-filter: blur(5000px);
-            background: #fff;
-            border-radius: 8px;
-            height: 200px;
-            border: 2px solid rgb(168, 162, 162);
-        }
-        .gait ul li a{
-            color: #0067dd;
-        }
         .Post ul li:hover .gait{
             display: block;
             position: absolute;
-            background: transparent;
-            margin-top: 50px;
+            background: #1f242d;
+            margin-top: 20px;
             margin-left: -200px;
         }
-        .Post ul li:hover .gait ul{
+
+
+        .Post ul li:hover .fan{
             display: block;
-            margin: 10px;
+            position: absolute;
+            background: #1f242d;
+            margin-top: 30px;
+            margin-left: -200px;
         }
-        .Post ul li:hover .gait ul li{
-            width: 250px;
-            padding: 20px;
-            background: transparent;
-            border-radius: 0;
-            text-align: left;
-            align-items: center;
-        }
-        .Post ul li:hover .gait ul li:last-child{
-            border-bottom: none;
-        }
-        .Post ul li:hover .gait ul li a:hover{
-            color: rgb(238, 238, 238);
-        }
-
-
-
 
 
 
@@ -369,13 +256,15 @@ body{
 .home-content p {
     font-size: 16px;
     opacity: 0;
+    color: #fff;
     animation: slideLeft 1s ease forwards;
     animation-delay: .1s;
 }
 .home img{
     background: transparent;
-    max-width: 450px;
+    max-width: 150px;
     opacity: 0;
+    margin-left: -160px;
     animation: zoomIn 1s ease forwards;
     animation-delay: 1s;
 }
@@ -528,14 +417,13 @@ body{
     background-size: cover;
     /* background-repeat: no-repeat; */
     }
-    .btn2, .btn{
+    .btn{
         margin-top: 20px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .btn2{
         margin-bottom: 50px;
+        background: #0ef;
     }
 
 }
@@ -585,12 +473,9 @@ body{
         <a href="#" style="--i:3">Payment</a>
         <a href="#" style="--i:4">Contact</a>
     </nav>
-    <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
-    </div>
     <div class="menu-bar">
         <ul>
-            <li><a href="#"><i class="ri-align-justify"></i></a>
+            <li><b><a href="#"><i class="ri-align-justify"></i></a></b>
                 <div class="Post">
                     <ul>
                         <li><a href="#" class="table">Table</a>
@@ -653,21 +538,9 @@ body{
     </div>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis perferendis quae distinctio minima, aperiam dignissimos! Sapiente cupiditate quibusdam fugiat provident dignissimos commodi consequuntur ratione nisi rerum mollitia, porro blanditiis doloremque!</p>
     <div class="media-icon"><br>
-        <a href="https://www.facebook.com/profile.php?id=100077752513671" class="icon" style="--i:5">
+        <a href="https://m.facebook.com/groups/809768553924421/?ref=share&mibextid=NSMWBT" class="icon" style="--i:5">
             <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/muslim_uddin_mk/?hl=en" class="icon" style="--i:6">
-            <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://github.com/MKmuslim-777" class="icon" style="--i:7">
-            <i class="fa-brands fa-github"></i>
-            </a>
-        <!-- <a href="https://x.com/shibu9910?t=gZrXf2TSUoOc8xgBezun_Q&s=07" class="icon" style="--i:8">
-            <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://youtube.com/@shiblyhossain?si=WPyd4Ga4NRrjxBDn" class="icon" style="--i:9">
-            <i class="fa-brands fa-youtube"></i>
-            </a> -->
     </div>
     <a href="https://mkmuslim-777.github.io/test/" class="btn">Registation</a>
    </section>
