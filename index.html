@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mks profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 10%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 34px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #0ef;
+}
+
+.toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .menu-bar{
+            justify-content: space-between;
+            display: none;
+        }
+        .menu-bar ul{
+            display: inline-flex;
+            list-style: none;
+            color: black;
+        }
+        .menu-bar ul li{
+            width: 19px;
+            height: 9px;
+            /* margin: 15px; */
+            /* padding: 15px; */
+        }
+        .menu-bar ul li a{
+            width: 11px;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+
+
+
+
+        .Post{
+            display: none;
+            backdrop-filter: blur(550px);
+            border-radius: 8px;
+            height: 200px;
+            border: 2px solid rgb(168, 162, 162);
+        }
+        .Post ul li a{
+            color: aliceblue;
+            /* padding-top: 50px; */
+        }
+        .menu-bar ul li:hover .Post{
+            display: block;
+            position: absolute;
+            background: transparent;
+            margin-top: 5px;
+            margin-left: -120px;
+            
+        }
+        .menu-bar ul li:hover .Post ul{
+            display: block;
+            margin: 10px;
+        }
+        .menu-bar ul li:hover .Post ul li{
+            width: 150px;
+            padding: 20px;
+            margin-top: none;
+            background: transparent;
+            border-radius: 0;
+            text-align: center;
+            justify-content: center;
+        }
+        .menu-bar ul li:hover .Post ul li:last-child{
+            border-bottom: none;
+        }
+        .menu-bar ul li:hover .Post ul li a:hover{
+            color: lightgreen;
+        }
+
+
+        /* person */
+        .Person{
+            display: none;
+            backdrop-filter: blur(1050px);
+            background: #fff;
+            border-radius: 8px;
+            height: 200px;
+            border: 2px solid rgb(168, 162, 162);
+        }
+        .Person ul li a{
+            color: #fff;
+        }
+        .Post ul li:hover .Person{
+            display: block;
+            position: absolute;
+            background: transparent;
+            margin-top: 15px;
+            margin-left: -300px;
+        }
+        .Post ul li:hover .Person ul{
+            display: block;
+            margin: 10px;
+        }
+        .Post ul li:hover .Person ul li{
+            width: 250px;
+            padding: 20px;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+            align-items: center;
+        }
+        .Post ul li:hover .Person ul li:last-child{
+            border-bottom: none;
+        }
+        .Post ul li:hover .Person ul li a:hover{
+            color: lightgreen;
+        }
+
+
+
+
+
+        /* King */
+        .King{
+            display: none;
+            backdrop-filter: blur(1050px);
+            background: #fff;
+            border-radius: 8px;
+            height: 200px;
+            border: 2px solid rgb(168, 162, 162);
+        }
+        .King ul li a{
+            color: #fff;
+        }
+        .Post ul li:hover .King{
+            display: block;
+            position: absolute;
+            background: transparent;
+            margin-top: 30px;
+            margin-left: -300px;
+        }
+        .Post ul li:hover .King ul{
+            display: block;
+            margin: 10px;
+        }
+        .Post ul li:hover .King ul li{
+            width: 250px;
+            padding: 10px;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+        .Post ul li:hover .King ul li:last-child{
+            border-bottom: none;
+        }
+        .Post ul li:hover .King ul li a:hover{
+            color: lightgreen;
+        }
+
+
+
+
+
+        /* fan */
+        .fan{
+            display: none;
+            backdrop-filter: blur(1050px);
+            background: #fff;
+            border-radius: 8px;
+            height: 200px;
+            border: 2px solid rgb(168, 162, 162);
+        }
+        .fan ul li a{
+            color: #fff;
+        }
+        .Post ul li:hover .fan{
+            display: block;
+            position: absolute;
+            background: transparent;
+            margin-top: 45px;
+            margin-left: -300px;
+        }
+        .Post ul li:hover .fan ul{
+            display: block;
+            margin: 10px;
+        }
+        .Post ul li:hover .fan ul li{
+            width: 250px;
+            padding: 10px;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+        .Post ul li:hover .fan ul li:last-child{
+            border-bottom: none;
+        }
+        .Post ul li:hover .fan ul li a:hover{
+            color: lightgreen;
+        }
+
+
+
+        /* gait */
+        .gait{
+            display: none;
+            backdrop-filter: blur(1050px);
+            background: #fff;
+            border-radius: 8px;
+            height: 200px;
+            border: 2px solid rgb(168, 162, 162);
+        }
+        .gait ul li a{
+            color: #fff;
+        }
+        .Post ul li:hover .gait{
+            display: block;
+            position: absolute;
+            background: transparent;
+            margin-top: 60px;
+            margin-left: -300px;
+        }
+        .Post ul li:hover .gait ul{
+            display: block;
+            margin: 10px;
+        }
+        .Post ul li:hover .gait ul li{
+            width: 250px;
+            padding: 10px;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+        .Post ul li:hover .gait ul li:last-child{
+            border-bottom: none;
+        }
+        .Post ul li:hover .gait ul li a:hover{
+            color: lightgreen;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    margin-top: none;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 0px;
+    font-size: 25px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3 span{
+    color: #0ef;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin-top: none;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.home-content p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .1s;
+}
+.home img{
+    background: transparent;
+    max-width: 450px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.media-icon a{
+    display: inline-flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    align-items: center;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: 0.3S ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+
+
+.media-icon a:hover{
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+    transform: translateY(-5px);
+}
+
+.btn, .btn2 {
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent;
+    border-radius: 24px;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    border: 1px solid #0ef;
+    transition: all 0.3s ease;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    color: #fff;
+}
+.btn2{
+    margin-left: 20px;
+}
+
+.btn:hover, .btn2:hover{
+    box-shadow: 0 0 10px #0ef;
+    background: #0ef;
+    transform: translateY(-5px);
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px){
+    .home-content{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 20px;
+    }
+    .home-content h1{
+        font-size: 30px;
+    }
+    body{
+    background-image: url(bg-mbl.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    }
+    .btn2, .btn{
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn2{
+        margin-bottom: 50px;
+    }
+
+}
+@media only screen and (max-width:600px) {
+    .home .home-content .img-home{
+        background: transparent;
+        margin-left: -550px;
+        max-width: 250px;
+        height: auto;
+        opacity: 0;
+        animation: zoomIn 1s ease forwards;
+        animation-delay: 1s;
+    }
+    body{
+        backdrop-filter: blur(3.5px);
+    }
+    .menu-bar{
+        display: block;
+        padding: 1px;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+}
+@media(max-width: 992px) {
+    .navbar{
+        display: none;
+    }
+    .menu-bar{
+        display: block;
+        padding: 1px;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+   <header class="header">
+    <a href="#" class="logo">BGPS.</a>
+
+    <nav class="navbar">
+        <a href="#" style="--i:1;" class="active">Home</a>
+        <a href="https://mkmuslim-777.github.io/test/" style="--i:2">Registation</a>
+        <a href="#" style="--i:3">Payment</a>
+        <a href="#" style="--i:4">Contact</a>
+    </nav>
+    <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="menu-bar">
+        <ul>
+            <li><a href="#"><i class="ri-align-justify"></i></a>
+                <div class="Post">
+                    <ul>
+                        <li><a href="#" class="table">Table</a>
+                            <div class="Person">
+                                <ul>
+                                    <li><a href="#">Muslim</a></li>
+                                    <li><a href="#">Sifat</a></li>
+                                    <li><a href="#">Mahmud</a></li>
+                                    <li><a href="#">Shibly</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">King</a>
+                            <div class="King">
+                                <ul>
+                                    <li><a href="#">Muslim</a></li>
+                                    <li><a href="#">Sifat</a></li>
+                                    <li><a href="#">Mahmud</a></li>
+                                    <li><a href="#">Shibly</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">fan</a>
+                            <div class="fan">
+                                <ul>
+                                    <li><a href="#">Muslim</a></li>
+                                    <li><a href="#">Sifat</a></li>
+                                    <li><a href="#">Mahmud</a></li>
+                                    <li><a href="#">Shibly</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">gait</a>
+                            <div class="gait">
+                                <ul>
+                                    <li><a href="#">Muslim</a></li>
+                                    <li><a href="#">Sifat</a></li>
+                                    <li><a href="#">Mahmud</a></li>
+                                    <li><a href="#">Shibly</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+   </header>
+   <section class="home">
+    <div class="img-home">
+        <img src="logo.png">
+    </div>
+    <div class="home-content">
+        <h3>WE ARE FORMER STUDENTS OF</h3>
+        <h1>Border Guard Public School Cox's Bazar</h1>
+        <!-- <h3>ESTD:1995</h3> -->
+        <h3>ESTD:<span class="multiple-text"></span></h3>
+        
+        
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis perferendis quae distinctio minima, aperiam dignissimos! Sapiente cupiditate quibusdam fugiat provident dignissimos commodi consequuntur ratione nisi rerum mollitia, porro blanditiis doloremque!</p>
+    <div class="media-icon"><br>
+        <a href="https://www.facebook.com/profile.php?id=100077752513671" class="icon" style="--i:5">
+            <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/muslim_uddin_mk/?hl=en" class="icon" style="--i:6">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://github.com/MKmuslim-777" class="icon" style="--i:7">
+            <i class="fa-brands fa-github"></i>
+            </a>
+        <!-- <a href="https://x.com/shibu9910?t=gZrXf2TSUoOc8xgBezun_Q&s=07" class="icon" style="--i:8">
+            <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://youtube.com/@shiblyhossain?si=WPyd4Ga4NRrjxBDn" class="icon" style="--i:9">
+            <i class="fa-brands fa-youtube"></i>
+            </a> -->
+    </div>
+    <a href="https://mkmuslim-777.github.io/test/" class="btn">Registation</a>
+   </section>
+
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclike = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+   <script>
+    var typed = new Typed(".multiple-text", {
+    strings: ["1995", "1995", "1995", "1995"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+})
+   </script>
+
+</body>
+</html>
